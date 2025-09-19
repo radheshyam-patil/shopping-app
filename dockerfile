@@ -1,10 +1,10 @@
 # File: Dockerfile
 
-FROM node:18-alpine
+FROM node:16
 
-WORKDIR /app
+WORKDIR /usr.src/app
 
-COPY package.json .
+COPY package.json ./
 
 RUN npm install
 

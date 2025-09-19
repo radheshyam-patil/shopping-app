@@ -1,0 +1,13 @@
+# File: shopping-app-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+ name: shopping-app-service
+spec:
+ type: LoadBalancer
+ selector:
+   app: shopping-app
+ ports:
+   - protocol: TCP
+     port: 80
+     targetPort: 3000
